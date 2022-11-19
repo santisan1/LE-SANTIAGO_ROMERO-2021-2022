@@ -4,8 +4,8 @@ import numpy as np
 
 def dataConvert(data):
     try:
-        data = float(data)
-        return True  # Convierto el dato a un float
+        data = float(data)  # Convierto el dato a un float
+        return True
     except:
         print("No es un valor esperado\n")
         return False  # Si tira error la conv. devuelvo un false
@@ -30,7 +30,7 @@ print("Entrenando..!")
 historial = modelo.fit(centimetros, pulgadas, epochs=1000, verbose=False)
 
 numVer = False
-while numVer == False:  # Hasta que el peso no sea valido va a seguir pidiendolo
+while numVer == False:
     num = input("Ingrese los centimetros que desea convertir: ")
     numVer = dataConvert(num)
 
